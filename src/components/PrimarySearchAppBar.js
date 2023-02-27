@@ -92,7 +92,7 @@ export default function SearchAppBar() {
             sx={{
               color: "white",
               border: "none",
-              display: { xs: "none", sm: "flex", md: "flex", lg: "flex" },
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
               marginLeft: "250px",
             }}
             startIcon={<LoginIcon />}
@@ -102,7 +102,7 @@ export default function SearchAppBar() {
           <Box>
             <MoreVertIcon
               sx={{
-                display: { xs: "flex", sm: "none", md: "none", lg: "none" },
+                display: { xs: "flex", sm: "flex", md: "none", lg: "none" },
                 color: "white",
               }}
             />

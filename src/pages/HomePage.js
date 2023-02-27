@@ -19,9 +19,15 @@ function HomePage() {
 
   return (
     <Container>
-      <Grid container rowSpacing={4} sx={{ mt: 2 }} display="flex">
+      <Grid
+        container
+        rowSpacing={4}
+        sx={{ mt: 2 }}
+        columnSpacing={4}
+        flexWrap={"wrap"}
+      >
         {jobList.map((job) => (
-          <Grid item xs={12} sm={7} md={5} lg={4}>
+          <Grid key={job.id} item xs={12} md={6} lg={4} justifyContent="center">
             <JobCard job={job} />
           </Grid>
         ))}

@@ -16,10 +16,9 @@ export default function JobCard({ job }) {
     <Box
       sx={{
         bgcolor: "secondary.main",
-        width: "100%",
-        maxWidth: "350px",
-        minWidth: "270px",
-        height: "100%",
+        maxWidth: "375px",
+        height: "250px",
+        margin: "auto",
         border: 1,
         borderColor: "secondary.main",
         borderRadius: "8px",
@@ -32,7 +31,7 @@ export default function JobCard({ job }) {
               gutterBottom
               variant="h4"
               component="div"
-              sx={{ fontSize: 20 }}
+              sx={{ fontSize: 15 }}
             >
               {job.title}
             </Typography>
@@ -44,7 +43,7 @@ export default function JobCard({ job }) {
             {jobSkills.skills.slice(0, 4).map((skill) => (
               <Chip
                 label={skill}
-                sx={{ fontSize: "0.6em", color: "white", bgcolor: "#FF4500" }}
+                sx={{ fontSize: "8px", color: "white", bgcolor: "#FF4500" }}
                 size="small"
               />
             ))}
@@ -53,18 +52,26 @@ export default function JobCard({ job }) {
         <Typography
           color="text.secondary"
           variant="body2"
-          sx={{ textAlign: "left", mt: 2 }}
+          sx={{
+            textAlign: "left",
+            marginLeft: "16px",
+            width: "280px",
+            mt: 2,
+            fontSize: "13px",
+            fontFamily: "Roboto, Helvetica, Arial, sans-serif;",
+          }}
         >
           {job.description}
         </Typography>
+
         <Button
           onClick={() => navigate(`/job/${job.id}`)}
           sx={{
             bgcolor: "#ffc107",
             color: "black",
-            height: "20px",
-            p: 1.5,
-            mt: 8,
+            width: "100px",
+            fontSize: "12px",
+            marginTop: "50px",
           }}
         >
           LEARN MORE
